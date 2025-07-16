@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Love, Just for You</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #b30059;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #d81b60;
+      transform: scale(1.05);
+    }
+
+    .message-box {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      font-style: italic;
+      min-height: 80px;
+      transition: opacity 0.3s;
+    }
+
+    .reasons-box {
+      background-color: #fff0f5;
+      border: 2px solid #e91e63;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 600px;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .reasons-box h2 {
+      color: #e91e63;
+      margin-bottom: 15px;
+    }
+
+    .reasons-box ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .reasons-box li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      background-color: #ccc;
+      color: #333;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .back-btn:hover {
+      background-color: #bbb;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <h1>To My One and Only</h1>
+  <p class="subtitle">click a button below whenever you need a little love, comfort, or joy</p>
+
+  <div class="buttons">
+    <button onclick="showQuote('happy')">happy</button>
+    <button onclick="showQuote('sad')">sad</button>
+    <button onclick="showQuote('tired')">tired</button>
+    <button onclick="showQuote('insecure')">insecure</button>
+    <button onclick="showQuote('angry')">angry</button>
+    <button onclick="showReasons()">do you know the 50+ reasons why i love you?</button>
+  </div>
+
+  <div class="message-box" id="quoteBox"></div>
+
+  <div class="reasons-box" id="reasonsBox">
+    <h2>50+ Reasons Why I Love You</h2>
+    <ul>
+      <li>1. you make me feel safe even in silence.</li>
+      <li>2. your smile makes my worst days bearable.</li>
+      <li>3. you believe in me more than i believe in myself.</li>
+      <li>4. you listen even when my words don’t make sense.</li>
+      <li>5. you never make me feel alone — not once.</li>
+      <li>6. you love me through all my moods and flaws.</li>
+      <li>7. you inspire me to be the best version of myself.</li>
+      <li>8. your hugs fix things that words can’t.</li>
+      <li>9. you choose me again and again.</li>
+      <li>10. your love is my peace in the chaos.</li>
+      <li>11. even when you doubt yourself, i see how strong you are.</li>
+      <li>12. because you’re you — and that’s more than enough.</li>
+      <li>13. you know how to make me laugh no matter what.</li>
+      <li>14. you support my dreams like they’re your own.</li>
+      <li>15. you remember the little things that matter to me.</li>
+      <li>16. your voice calms my storms.</li>
+      <li>17. we can be silly and serious and everything in between.</li>
+      <li>18. you accept me for who i am.</li>
+      <li>19. you make me feel understood.</li>
+      <li>20. your love feels like home.</li>
+      <li>21. you never give up on me.</li>
+      <li>22. you’re patient with my growth.</li>
+      <li>23. you make ordinary moments feel magical.</li>
+      <li>24. your touch is comforting beyond words.</li>
+      <li>25. you bring light into my darkest days.</li>
+      <li>26. you’re my biggest fan and fiercest protector.</li>
+      <li>27. your kindness is effortless and genuine.</li>
+      <li>28. we dream together and plan for forever.</li>
+      <li>29. you see beauty where i see flaws.</li>
+      <li>30. you make me feel like the luckiest person alive.</li>
+      <li>31. you always try — and that means everything.</li>
+      <li>32. you hold me together when i fall apart.</li>
+      <li>33. your honesty teaches me trust.</li>
+      <li>34. you make me feel proud to be loved by you.</li>
+      <li>35. you create a space where i feel safe.</li>
+      <li>36. you’re always there — physically or in spirit.</li>
+      <li>37. you challenge me in the best ways.</li>
+      <li>38. you grow with me, not away from me.</li>
+      <li>39. your presence feels like sunlight.</li>
+      <li>40. you remind me what love truly means.</li>
+      <li>41. your heart is beautiful and brave.</li>
+      <li>42. you see me — really see me.</li>
+      <li>43. you always try to make things better.</li>
+      <li>44. your words bring peace to my chaos.</li>
+      <li>45. you never make me feel like a burden.</li>
+      <li>46. you encourage me when i want to give up.</li>
+      <li>47. you make life feel worth celebrating.</li>
+      <li>48. your laughter is a sound i want forever.</li>
+      <li>49. you are my person — always have been, always will be.</li>
+      <li>50. you love me in ways i didn’t know i needed.</li>
+      <li>51. i love you because life with you feels like a beautiful story i never want to end.</li>
+    </ul>
+    <button class="back-btn" onclick="hideReasons()">back</button>
+  </div>
+
+  <footer>
+    made with all my heart — just for you.
+  </footer>
+
+  <script>
+    const quotes = {
+      happy: [
+        "seeing you smile is the highlight of my every day.",
+        "your laughter is my favorite melody.",
+        "you make the world so much brighter just by being you."
+      ],
+      sad: [
+        "i may not fix everything, but i'll hold you until it gets better.",
+        "your tears matter to me. you matter to me.",
+        "you're not alone. you never will be as long as i'm here."
+      ],
+      tired: [
+        "rest, love. the world can wait — your peace is important.",
+        "you deserve all the rest in the world. i'm proud of how hard you try.",
+        "even superheroes need to recharge — and you're mine."
+      ],
+      insecure: [
+        "you are more than enough. to me, you are everything.",
+        "no flaw, no fear, nothing will ever make me love you less.",
+        "you are beautiful — inside, outside, always."
+      ],
+      angry: [
+        "breathe, my love. you are stronger than this moment.",
+        "i'm here to listen — not to fix, just to understand.",
+        "it's okay to feel it. i'm still holding your hand through it."
+      ]
+    };
+
+    function showQuote(feeling) {
+      document.getElementById('reasonsBox').style.display = 'none';
+      const set = quotes[feeling];
+      const random = set[Math.floor(Math.random() * set.length)];
+      document.getElementById('quoteBox').textContent = random;
+    }
+
+    function showReasons() {
+      document.getElementById('quoteBox').textContent = '';
+      document.getElementById('reasonsBox').style.display = 'block';
+    }
+
+    function hideReasons() {
+      document.getElementById('reasonsBox').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

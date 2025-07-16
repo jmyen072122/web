@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 3rd Anniversary, Love!</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #ffccdc;
+      padding: 40px 20px 20px;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.2rem;
+    }
+
+    .about {
+      background-color: #ffe6ec;
+      padding: 30px 20px;
+    }
+
+    .about h2 {
+      font-size: 1.8rem;
+      color: #c2185b;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    nav {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav button {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    nav button:hover {
+      background-color: #d81b60;
+      transform: scale(1.1);
+    }
+
+    .gallery {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 15px;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    }
+
+    .gallery.active {
+      display: flex;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #ffe6f0;
+      color: #b30059;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .about h2 {
+        font-size: 1.5rem;
+      }
+
+      .about p, p {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+
+      nav button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+
+      .gallery {
+        gap: 10px;
+      }
+    }
+  </style>
+  <script>
+    function showGallery(year) {
+      const galleries = document.querySelectorAll('.gallery');
+      galleries.forEach(g => g.classList.remove('active'));
+      const selected = document.getElementById(year);
+      selected.classList.add('active');
+      window.scrollTo({ top: selected.offsetTop - 20, behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Happy 3rd Anniversary, Mahal Ko!</h1>
+    <p>3 years, countless memories, and a lifetime to go...</p>
+  </header>
+
+  <section class="about">
+    <h2>Our Love Story</h2>
+    <p>From the shy glances to deep conversations, we grew from strangers to soulmates. This page is a memory vault — a tribute to the bond we've built. Through all the ups and downs, you are still my favorite hello and hardest goodbye. Here's to many more years of laughter, love, and growth — together, always.</p>
+  </section>
+
+  <nav>
+    <button onclick="showGallery('year1')">1st Year</button>
+    <button onclick="showGallery('year2')">2nd Year</button>
+    <button onclick="showGallery('year3')">3rd Year</button>
+  </nav>
+
+  <section id="year1" class="gallery active">
+    <img src="images/year1_1.jpg" alt="First year memory">
+    <img src="images/year1_2.jpg" alt="First year moment">
+    <!-- add more images here, it will auto-adjust layout -->
+  </section>
+
+  <section id="year2" class="gallery">
+    <img src="images/year2_1.jpg" alt="Second year memory">
+    <img src="images/year2_2.jpg" alt="Second year moment">
+    <!-- add more images here, it will auto-adjust layout -->
+  </section>
+
+  <section id="year3" class="gallery">
+    <img src="images/year3_1.jpg" alt="Third year memory">
+    <img src="images/year3_2.jpg" alt="Third year moment">
+    <!-- add more images here, it will auto-adjust layout -->
+  </section>
+
+  <footer>
+    you + me = always & forever
+  </footer>
+</body>
+</html>
